@@ -1,8 +1,8 @@
-import getpass
 import streamlit as st
-username = getpass.getuser()
-st.set_page_config(page_title=username,page_icon = None,layout='centered')
 
+# Get the value of the username configuration key
+username = st.secrets["username"]
 
-print("Welcome, " + username + "!")
-st.write("Welcome, " + username + "!")
+# Show the username
+st.text(f"Welcome, {username}!")
+
