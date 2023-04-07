@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 import pytesseract
-
+pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract' 
 # Title of the app
 st.title("Image to Text Conversion")
 
