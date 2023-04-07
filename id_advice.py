@@ -1,7 +1,15 @@
 import streamlit as st
 import pytesseract
 from PIL import Image
+from tempfile import TemporaryDirectory
+import os
 
+# Replace '/usr/local/bin' with the actual path to the Tesseract OCR executable
+tesseract_path = '/usr/local/bin'
+os.environ['PATH'] = tesseract_path + os.pathsep + os.environ['PATH']
+with TemporaryDirectory() as temp_dir:
+    pytesseract.pytesseract.tesseract_cmd = f'{tesseract_path}/tesseract'
+    
 st.title("Image to Text Converter")
 
 # Display file uploader widget
