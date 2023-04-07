@@ -1,2 +1,2 @@
-pytesseract==0.3.10
+pytesseract==0.3.8
 tesseract-ocr==4.1.1
