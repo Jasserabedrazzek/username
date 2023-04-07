@@ -5,7 +5,7 @@ from tempfile import TemporaryDirectory
 import os
 
 # Replace '/usr/local/bin' with the actual path to the Tesseract OCR executable
-tesseract_path = '/usr/local/bin'
+tesseract_path = '/home/appuser/venv/lib/python3.9/site-packages/pytesseract/pytesseract.py'
 os.environ['PATH'] = tesseract_path + os.pathsep + os.environ['PATH']
 with TemporaryDirectory() as temp_dir:
     pytesseract.pytesseract.tesseract_cmd = f'{tesseract_path}/tesseract'
